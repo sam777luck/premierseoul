@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
     color: #2d3748;
     line-height: 1.6;
     overflow-x: hidden;
@@ -245,6 +245,14 @@ section {
 .process-step p {
     color: #4a5568;
     font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.process-step .cta-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
 }
 
 /* Pricing Section */
@@ -359,7 +367,7 @@ section {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 24px;
     font-weight: 500;
     color: #1a202c;
@@ -468,6 +476,12 @@ section {
     font-size: 18px;
     color: #4a5568;
     line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
 }
 
 /* Footer */
