@@ -242,6 +242,29 @@ section {
     margin-bottom: 10px;
 }
 
+.fee-indicator {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.fee-badge {
+    display: inline-block;
+    font-size: 12px;
+    background: #4299e1;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.fee-note {
+    font-size: 12px;
+    color: #48bb78;
+    font-style: italic;
+    margin: 5px 0;
+}
+
 .process-step p {
     color: #4a5568;
     font-size: 15px;
@@ -262,24 +285,21 @@ section {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto 40px;
 }
 
 .pricing-card {
     background: #f7fafc;
-    padding: 40px;
+    padding: 30px;
     border-radius: 12px;
     border: 2px solid #e2e8f0;
     transition: all 0.3s;
-}
-
-.pricing-card.featured {
-    border-color: #48bb78;
-    background: #f0fff4;
-    transform: scale(1.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing-card:hover {
@@ -289,51 +309,56 @@ section {
 
 .pricing-card h3 {
     color: #1a202c;
-    margin-bottom: 15px;
-    font-size: 28px;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .price {
     font-size: 24px;
     font-weight: 700;
     color: #48bb78;
-    margin-bottom: 25px;
+    margin-bottom: 8px;
+}
+
+.pricing-subtitle {
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
 .pricing-features {
     list-style: none;
-    margin-bottom: 30px;
+    margin: 0;
 }
 
 .pricing-features li {
     padding: 10px 0;
     color: #4a5568;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.pricing-features li:not(:last-child) {
     border-bottom: 1px solid #e2e8f0;
 }
 
-.pricing-features li:before {
-    content: "✓ ";
-    color: #48bb78;
-    font-weight: 700;
-    margin-right: 8px;
-}
-
-.pricing-button {
-    display: block;
-    width: 100%;
-    background: #48bb78;
-    color: white;
-    padding: 14px;
+.pricing-scope {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background: #f7fafc;
     border-radius: 8px;
-    text-decoration: none;
-    text-align: center;
-    font-weight: 600;
-    transition: background 0.3s;
+    border-left: 4px solid #48bb78;
 }
 
-.pricing-button:hover {
-    background: #38a169;
+.pricing-scope p {
+    color: #4a5568;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
 }
+
 
 /* FAQ Section */
 .faq {
@@ -341,7 +366,7 @@ section {
 }
 
 .faq .section-title {
-    text-align: left;
+    text-align: center;
     margin-bottom: 40px;
 }
 
@@ -486,8 +511,8 @@ section {
 
 /* Footer */
 footer {
-    background: #1a202c;
-    color: white;
+    background: #f7fafc;
+    color: #2d3748;
     padding: 60px 0 30px;
 }
 
@@ -499,7 +524,7 @@ footer {
 }
 
 .footer-section h4 {
-    color: white;
+    color: #1a202c;
     margin-bottom: 20px;
     font-size: 18px;
 }
@@ -511,8 +536,8 @@ footer {
 
 .lang-btn {
     background: transparent;
-    border: 2px solid #4a5568;
-    color: white;
+    border: 2px solid #cbd5e0;
+    color: #2d3748;
     padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
@@ -523,6 +548,7 @@ footer {
 .lang-btn.active {
     background: #48bb78;
     border-color: #48bb78;
+    color: white;
 }
 
 .contact-methods {
@@ -560,8 +586,8 @@ footer {
 .footer-bottom {
     text-align: center;
     padding-top: 30px;
-    border-top: 1px solid #4a5568;
-    color: #a0aec0;
+    border-top: 1px solid #e2e8f0;
+    color: #718096;
 }
 
 /* Modal */
