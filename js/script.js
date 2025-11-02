@@ -1,13 +1,28 @@
 // Modal functionality
 const modal = document.getElementById('consultation-modal');
-const openModalBtn = document.getElementById('open-modal');
 const closeBtn = document.querySelector('.close');
 
-if (openModalBtn) {
-    openModalBtn.addEventListener('click', () => {
-        modal.style.display = 'block';
-    });
+// Function to open modal
+function openModal() {
+    modal.style.display = 'block';
 }
+
+// Open modal for all elements with class 'open-modal' or id 'open-modal'
+document.querySelectorAll('.open-modal, #open-modal').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+    });
+});
+
+// Open modal when clicking Contact link
+const contactLinks = document.querySelectorAll('a[href="#contact"]');
+contactLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+    });
+});
 
 if (closeBtn) {
     closeBtn.addEventListener('click', () => {
@@ -17,6 +32,13 @@ if (closeBtn) {
 
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Close modal with ESC key
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
         modal.style.display = 'none';
     }
 });
